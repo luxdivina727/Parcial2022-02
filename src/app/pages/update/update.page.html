@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Actualizar {{song.songName}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content padding>
+  <ion-list lines="full">
+    <ion-item *ngIf="song">
+      <ion-label stacked> Nombre de la canción </ion-label>
+      <ion-input required  type="text" [(ngModel)]="song.songName"> </ion-input>
+      </ion-item>
+    <ion-item *ngIf="song">
+      <ion-label stacked> Nombre del Artista </ion-label>
+      <ion-input required  type="text" [(ngModel)]="song.artistName"> </ion-input>
+    </ion-item>
+      <ion-item *ngIf="song">
+        <ion-label stacked> Album</ion-label>
+        <ion-input required  type="text" [(ngModel)]="song.albumName"> </ion-input>
+        </ion-item>
+        <ion-item *ngIf="song">
+          <ion-label stacked>Descripción</ion-label>
+          <ion-input required  type="text" [(ngModel)]="song.songDescription"> </ion-input>
+      </ion-item>
+    </ion-list>
+      <ion-button expand="full"  (click)="updateSong()">Editar canción </ion-button>
+</ion-content>
+

@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Crear Recording</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list lines="full">
+    <ion-item *ngIf="todo">
+      <ion-input required type="text" placeholder="Nombre" [(ngModel)]="todo.nameRecoding"></ion-input>
+    </ion-item>
+    <ion-item *ngIf="todo">
+      <ion-input required type="text" placeholder="Tipo" [(ngModel)]="todo.typeRecoding"></ion-input>
+    </ion-item>
+    
+    <ion-item *ngIf="todo">
+      <ion-input required type="text" placeholder="Numero Cabinas" [(ngModel)]="todo.numberCabins"></ion-input>
+    </ion-item>
+    
+    <ion-item *ngIf="todo">
+      <ion-input required type="text" placeholder="Propietario" [(ngModel)]="todo.owner"></ion-input>
+    </ion-item>
+  </ion-list>
+  <ion-button expand="full" (click)="saveTodo()">Save</ion-button>
+</ion-content>
+

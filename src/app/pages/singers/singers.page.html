@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>singers</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<ion-list>
+  <ion-item>
+    <ion-label text-wrap>
+      <h3>Nombre</h3>
+    </ion-label>
+    <ion-label text-wrap>
+      <h3>Apellido</h3>
+    </ion-label>
+    <ion-label text-wrap>
+      <h3>Email</h3>
+    </ion-label>
+    <ion-label text-wrap>
+      <h3>Ciudad</h3>
+    </ion-label>
+  </ion-item>
+  <ion-item button *ngFor="let item of(results | async)" >
+    <ion-label text-wrap>
+      <h4>{{item.name}}</h4>
+    </ion-label>
+    <ion-label text-wrap>
+      <h4>{{item.username}}</h4>
+    </ion-label>
+    <ion-label text-wrap>
+      <h4>{{item.email}}</h4>
+    </ion-label>
+    <ion-label text-wrap>
+      <h4>{{item.address.city}}</h4>
+    </ion-label>
+  </ion-item>
+</ion-list>
+</ion-content>
