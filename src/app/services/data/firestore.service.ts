@@ -29,6 +29,9 @@ export class FirestoreService {
   getSingers():Observable<any>{
     return this.http.get('https://jsonplaceholder.typicode.com/users');
   }
+  getAlbums():Observable<any>{
+    return this.http.get('https://jsonplaceholder.typicode.com/photos');
+  }
   /* SONG */
   createSong(albumName:string, artistName:string, songDescription:string,songName:string): Promise<void>
   { const id= this.firestore.createId();

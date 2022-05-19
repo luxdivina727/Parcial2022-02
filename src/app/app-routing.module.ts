@@ -43,6 +43,10 @@ const routes: Routes = [
     path: 'recording-detail/:id',
     loadChildren: () => import('./pages/recording-detail/recording-detail.module').then( m => m.RecordingDetailPageModule)
   },
+  {
+    path: 'imagines',
+    loadChildren: () => import('./pages/imagines/imagines.module').then( m => m.ImaginesPageModule)
+  },
 ];
 
 @NgModule({

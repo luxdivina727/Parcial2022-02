@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Imagenes</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  <ion-list>
+    <ion-item>
+      <ion-label text-wrap>
+        <h3>Fotografía</h3>
+      </ion-label>
+    </ion-item>
+    <ion-item button *ngFor="let item of(results | async)" >
+      <ion-thumbnail slot="start">
+        <ion-img [src]="item.url"></ion-img>
+      </ion-thumbnail>
+      <ion-label text-wrap>
+        <h4>{{item.title}}</h4>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+  </ion-content>
+  
